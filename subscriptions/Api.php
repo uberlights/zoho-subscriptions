@@ -5,6 +5,7 @@ namespace Uberlights\Zoho\Subscriptions;
 use GuzzleHttp\Client;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Guzzle\Description;
+use Uberlights\Zoho\Subscriptions\Support\Import;
 
 class Api
 {
@@ -29,6 +30,7 @@ class Api
     private $description;
     private $consumer;
     private $options;
+    private $rootPath;
 
     public function __construct($config = [])
     {
@@ -52,10 +54,11 @@ class Api
     {
 
         $defaults = $this->DEFAULTS;
-        $defaults['description']['jsonPath'] = __DIR__ . '/' . $defaults['description']['jsonPath'];
+        $this->rootPath = realpath(__DIR__). '/';
+        $defaults['description']['jsonPath'] = realpath($this->rootPath . $defaults['description']['jsonPath']);
         $mergedOptions = array_merge_recursive($defaults, $options);
-        $parsedOptioons = $this->parseOptions($mergedOptions, $options);
-        $this->options = $parsedOptioons;
+        $parsedOptions = $this->parseOptions($mergedOptions, $options);
+        $this->options = $parsedOptions;
 
         return $this;
     }
@@ -94,7 +97,7 @@ class Api
             $this->description = $descriptionOptions;
         } else {
             if (empty($jsonPath)) {
-                $jsonPath = __DIR__ . '/' . $this->options['description']['jsonPath'];
+                $jsonPath = realpath($this->options['description']['jsonPath']);
             }
 
             try {
@@ -137,5 +140,15 @@ class Api
         }
 
         throw new \BadMethodCallException(sprintf('Call to undefined method %s::%s().', get_called_class(), $name));
+    }
+
+    public function importApi($source = '', $destination = '', $sourceType = 'postman') {
+        if (empty($source)) {
+            $source = realpath($this->rootPath .'./config/postman.json');
+        }
+        if (empty($destination)) {
+            $destination = realpath($this->rootPath .'./config/api.json');
+        }
+        return (new Import($source))->writeData($destination);
     }
 }

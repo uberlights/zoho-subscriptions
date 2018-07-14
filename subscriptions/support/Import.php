@@ -7,12 +7,17 @@ class Import
 {
     private $data = '';
     private $options = [];
+    private $rootPath;
 
-    public function __construct($filePath, $options = [])
+    public function __construct($filePath = '', $options = [])
     {
         $data = '';
+        $this->rootPath = $rootPath = realpath(__DIR__ . './../');
         if (!file_exists($filePath)) {
-            $filePath = __DIR__ . '/' . $filePath;
+            $filePath = realpath($rootPath . '/' . $filePath);
+        }
+        if (!file_exists($filePath)) {
+            $filePath = realpath($rootPath . '/config/postman.json');
         }
         if (file_exists($filePath)) {
             $data = $this->importFromJson($filePath, $options);
@@ -25,8 +30,14 @@ class Import
     {
         return $this->data;
     }
-    public function writeData($path)
+    public function writeData($path = '')
     {
+        if (empty($path)) {
+            $path = realpath($this->rootPath . '/config/api.json');
+        }
+        if (file_exists($path)) {
+            rename($path, $path.'.bak');
+        }
         $json = \GuzzleHttp\json_encode($this->data, JSON_PRETTY_PRINT | JSON_ERROR_NONE | JSON_UNESCAPED_SLASHES);
         return file_put_contents($path, $json);
     }
@@ -35,7 +46,7 @@ class Import
     private function importFromJson($filePath)
     {
         if (!file_exists($filePath)) {
-            $filePath = __DIR__ . '/' . $filePath;
+            $filePath = realpath($this->rootPath . '/' . $filePath);
         }
         $json = \GuzzleHttp\json_decode(file_get_contents($filePath), true);
         $data = [];
@@ -135,9 +146,10 @@ class Import
     private function sluggify($string = '')
     {
         if (!empty($string)) {
-            $regexs = ['/[^\w\s_.-]/', '/\s+?/', '/\-+?/'];
-            $replacer = ['', '-', ' '];
-            $string = str_replace(' ', '', lcfirst(ucwords(preg_replace($regexs, $replacer, strtolower($string)))));
+            $regexs = ['/[^\w\s_.-]|\s+?/', '/\-+?/'];
+            $replacer = ['-', ' '];
+            $string = str_replace(' ', '',
+                lcfirst(ucwords(preg_replace($regexs, $replacer, strtolower($string)))));
         }
         return $string;
     }

@@ -979,7 +979,7 @@
             "responseModel": "getResponse",
             "parameters": []
         },
-        "addeditDescriptionForAPlanInLineItemsList": {
+        "addEditDescriptionForAPlanInLineItemsList": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/lineitems/{plan_code}",
             "responseModel": "getResponse",
@@ -1015,7 +1015,7 @@
                 }
             }
         },
-        "associateupdateBankAccountToAnExisitngBankAccount": {
+        "associateUpdateBankAccountToAnExisitngBankAccount": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/bankaccount",
             "responseModel": "getResponse",
@@ -1158,7 +1158,7 @@
                 }
             }
         },
-        "associateupdateCardToAnExistingCard": {
+        "associateUpdateCardToAnExistingCard": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/card",
             "responseModel": "getResponse",
@@ -1217,7 +1217,7 @@
                 }
             }
         },
-        "associateupdateBankAccountToANewBankAccount": {
+        "associateUpdateBankAccountToANewBankAccount": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/bankaccount",
             "responseModel": "getResponse",
@@ -1292,7 +1292,7 @@
                 }
             }
         },
-        "associateupdateCardToANewCard": {
+        "associateUpdateCardToANewCard": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/card",
             "responseModel": "getResponse",
@@ -1383,7 +1383,7 @@
                 }
             }
         },
-        "associateupdatePaypalAccountToAnExistingPaypalAccount": {
+        "associateUpdatePaypalAccountToAnExistingPaypalAccount": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/paypalaccount",
             "responseModel": "getResponse",
@@ -1451,7 +1451,7 @@
             "responseModel": "getResponse",
             "parameters": []
         },
-        "addeditDescriptionForAnAddOnInLineItemsList": {
+        "addEditDescriptionForAnAddOnInLineItemsList": {
             "httpMethod": "POST",
             "uri": "subscriptions/{subscription_id}/lineitems/{addon_code}",
             "responseModel": "getResponse",
