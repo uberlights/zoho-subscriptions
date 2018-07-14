@@ -1,0 +1,32 @@
+{
+    "name": "uberlights/zoho-subscriptions",
+    "description": "PHP Client Library to Consume Zoho Subscriptions REST API",
+    "keywords":["zoho", "subscriptions", "php", "client", "rest", "api"],
+    "type": "library",
+    "homepage": "https://github.com/uberlights/zoho-subscriptions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UberLights",
+            "homepage": "https://github.com/uberlights/",
+            "email": "contact@uberlights.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle-services": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2.0",
+        "mockery/mockery": "^1.1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Uberlights\\Zoho\\Subscriptions": "src/subscriptions"
+        }
+    },
+    "extra": {
+    },
+    "minimum-stability": "dev"
+}

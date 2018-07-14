@@ -1,0 +1,2798 @@
+{
+    "operations": {
+        "retreiveDetailsOfAHostedpages": {
+            "httpMethod": "GET",
+            "uri": "hostedpages/{hostedpage_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "hostedpage_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listingAllHostedpages": {
+            "httpMethod": "GET",
+            "uri": "hostedpages",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "creatingHostedPageForANewSubscriptionForAnExistingCustomer": {
+            "httpMethod": "POST",
+            "uri": "hostedpages/newsubscription",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "json"
+                },
+                "contactpersons": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "additional_param": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingHostedPageForANewSubscriptionForANewCustomer": {
+            "httpMethod": "POST",
+            "uri": "hostedpages/newsubscription",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "additional_param": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingHostedPageForUpdateCard": {
+            "httpMethod": "POST",
+            "uri": "hostedpages/updatecard",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "json"
+                },
+                "additional_param": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingHostedPageForBuyingOneTimeAddon": {
+            "httpMethod": "POST",
+            "uri": "hostedpages/buyonetimeaddon",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "additional_param": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingHostedPageForUpdateSubscription": {
+            "httpMethod": "POST",
+            "uri": "hostedpages/updatesubscription",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "json"
+                },
+                "contactpersons": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "additional_param": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "listAllTransactions": {
+            "httpMethod": "GET",
+            "uri": "transactions",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "deleteACustomerComment": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/comments/{comment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "comment_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "bulkMarkCustomersAsActive": {
+            "httpMethod": "POST",
+            "uri": "customers/markasactive",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "stopAllRemindersForACustomer": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/paymentreminder/disable",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markACustomerAsActive": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/markasactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listOfAllCustomers": {
+            "httpMethod": "GET",
+            "uri": "customers",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "retrieveDetailsOfACustomer": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listCustomerComments": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/comments",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateACustomer": {
+            "httpMethod": "PUT",
+            "uri": "customers/{customer_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "display_name": {
+                    "location": "json"
+                },
+                "salutation": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "email": {
+                    "location": "json"
+                },
+                "company_name": {
+                    "location": "json"
+                },
+                "phone": {
+                    "location": "json"
+                },
+                "mobile": {
+                    "location": "json"
+                },
+                "website": {
+                    "location": "json"
+                },
+                "twitter": {
+                    "location": "json"
+                },
+                "facebook": {
+                    "location": "json"
+                },
+                "billing_address": {
+                    "location": "json"
+                },
+                "shipping_address": {
+                    "location": "json"
+                },
+                "currency_code": {
+                    "location": "json"
+                },
+                "notes": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "ach_supported": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "default_templates": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteACustomer": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "unusedCreditsOfACustomer": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/unusedcredits",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "bulkMarkCustomersAsInactive": {
+            "httpMethod": "POST",
+            "uri": "customers/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "createACustomer": {
+            "httpMethod": "POST",
+            "uri": "customers",
+            "responseModel": "getResponse",
+            "parameters": {
+                "display_name": {
+                    "location": "json"
+                },
+                "salutation": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "email": {
+                    "location": "json"
+                },
+                "company_name": {
+                    "location": "json"
+                },
+                "phone": {
+                    "location": "json"
+                },
+                "mobile": {
+                    "location": "json"
+                },
+                "website": {
+                    "location": "json"
+                },
+                "twitter": {
+                    "location": "json"
+                },
+                "facebook": {
+                    "location": "json"
+                },
+                "billing_address": {
+                    "location": "json"
+                },
+                "shipping_address": {
+                    "location": "json"
+                },
+                "currency_code": {
+                    "location": "json"
+                },
+                "notes": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "ach_supported": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "default_templates": {
+                    "location": "json"
+                }
+            }
+        },
+        "bulkDeleteCustomers": {
+            "httpMethod": "DELETE",
+            "uri": "customers",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "markACustomerAsInactive": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "enableAllRemaindersForACustomer": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/paymentreminder/enable",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteACustomerAddress": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/address/{address_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "address_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteAPaypalAccount": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/paypalaccounts/{paypal_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "paypal_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deletingAProduct": {
+            "httpMethod": "DELETE",
+            "uri": "products/{product_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "product_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updatingAProduct": {
+            "httpMethod": "PUT",
+            "uri": "products/{product_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "product_id": {
+                    "location": "uri"
+                },
+                "name": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "email_ids": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingAProduct": {
+            "httpMethod": "POST",
+            "uri": "products",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "email_ids": {
+                    "location": "json"
+                },
+                "redirect_url": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveAProduct": {
+            "httpMethod": "GET",
+            "uri": "products/{product_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "product_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markAProductAsActive": {
+            "httpMethod": "POST",
+            "uri": "products/{product_id}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "product_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listAllProducts": {
+            "httpMethod": "GET",
+            "uri": "products",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "markAProductAsInactive": {
+            "httpMethod": "POST",
+            "uri": "products/{product_id}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "product_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteASalesPerson": {
+            "httpMethod": "DELETE",
+            "uri": "salespersons/{salesperson_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "salesperson_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "bulkDeleteSalesperons": {
+            "httpMethod": "DELETE",
+            "uri": "salespersons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "listAllSalesPersons": {
+            "httpMethod": "GET",
+            "uri": "salespersons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "deleteACreditnoteRefund": {
+            "httpMethod": "DELETE",
+            "uri": "creditnotes/{creditnote_id}/refunds/{refund_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "refund_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteACreditnote": {
+            "httpMethod": "DELETE",
+            "uri": "creditnotes/{creditnote_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteACreditnoteComment": {
+            "httpMethod": "DELETE",
+            "uri": "creditnotes/{creditnote_id}/comments/{comment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "comment_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveRefundDetails": {
+            "httpMethod": "GET",
+            "uri": "creditnotes/refunds/{refund_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "refund_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "refundACreditnote": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/refunds",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "amount": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteCreditsApplied": {
+            "httpMethod": "DELETE",
+            "uri": "invoices/{invoice_id}/creditsapplied/{creditnotes_invoice_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "creditnotes_invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "applyCreditsToInvoices": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/invoices",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "invoices": {
+                    "location": "json"
+                }
+            }
+        },
+        "emailACreditNote": {
+            "httpMethod": "POST",
+            "uri": "invoices/{creditnote_id}/email",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "to_mail_ids": {
+                    "location": "json"
+                },
+                "cc_mail_ids": {
+                    "location": "json"
+                },
+                "subject": {
+                    "location": "json"
+                },
+                "body": {
+                    "location": "json"
+                }
+            }
+        },
+        "openAVoidedCreditNote": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/converttoopen",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "voidACreditnote": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/void",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveACreditnote": {
+            "httpMethod": "GET",
+            "uri": "creditnotes/{creditnotes_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnotes_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateCustomFieldsForCreditNote": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/customfields",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "createACreditnote": {
+            "httpMethod": "POST",
+            "uri": "creditnotes",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "json"
+                },
+                "contact_persons": {
+                    "location": "json"
+                },
+                "creditnote_number": {
+                    "location": "json"
+                },
+                "ignore_auto_number_generation": {
+                    "location": "json"
+                },
+                "reference_number": {
+                    "location": "json"
+                },
+                "date": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "creditnote_items": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "notes": {
+                    "location": "json"
+                },
+                "terms": {
+                    "location": "json"
+                },
+                "template_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "bulkDeleteCreditnotes": {
+            "httpMethod": "DELETE",
+            "uri": "creditnotes",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "listingAllPlansForAProduct": {
+            "httpMethod": "GET",
+            "uri": "plans",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "updatingAPlan": {
+            "httpMethod": "PUT",
+            "uri": "plans/{plan_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan_code": {
+                    "location": "json"
+                },
+                "name": {
+                    "location": "json"
+                },
+                "recurring_price": {
+                    "location": "json"
+                },
+                "interval": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "billing_cycles": {
+                    "location": "json"
+                },
+                "trial_period": {
+                    "location": "json"
+                },
+                "setup_fee": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingAPlan": {
+            "httpMethod": "POST",
+            "uri": "plans",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "plan_code": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "interval": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "billing_cycles": {
+                    "location": "json"
+                },
+                "setup_price": {
+                    "location": "json"
+                },
+                "trial_period": {
+                    "location": "json"
+                },
+                "recurring_price": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "markAPlanAsInactive": {
+            "httpMethod": "POST",
+            "uri": "plans/{plan_code}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markAPlanAsActive": {
+            "httpMethod": "POST",
+            "uri": "plans/{plan_code}/markasactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retreiveAPlan": {
+            "httpMethod": "GET",
+            "uri": "plans/{plan_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteAPlan": {
+            "httpMethod": "DELETE",
+            "uri": "plans/{plan_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "plan_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listingAllPlans": {
+            "httpMethod": "GET",
+            "uri": "plans",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "addANote": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/notes",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "reactivateASubscription": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/reactivate",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteSubscriptionNote": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}/notes/{note_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "note_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "creatingAnOnlineSubscriptionForAnExistingCustomer": {
+            "httpMethod": "POST",
+            "uri": "subscriptions",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                },
+                "card": {
+                    "location": "json"
+                },
+                "payment_gateways": {
+                    "location": "json"
+                }
+            }
+        },
+        "bulkCancelSubscriptions": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/bulkcancel",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "addeditDescriptionForAPlanInLineItemsList": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/lineitems/{plan_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "plan_code": {
+                    "location": "uri"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "removeCardAssociatedWithASubscription": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}/card",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updatingASubscription": {
+            "httpMethod": "PUT",
+            "uri": "subscriptions/{subscription_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "associateupdateBankAccountToAnExisitngBankAccount": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/bankaccount",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "auto_collect": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "listingAllSubscriptions": {
+            "httpMethod": "GET",
+            "uri": "subscriptions",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "changeToOnlineMode": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/autocollect",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "auto_collect": {
+                    "location": "json"
+                }
+            }
+        },
+        "retreivingDetailsOfASubscription": {
+            "httpMethod": "GET",
+            "uri": "subscriptions/{subscription_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "buyOneTimeAddon": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/buyonetimeaddon",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingAnOfflineSubscriptionForAnExistingCustomer": {
+            "httpMethod": "POST",
+            "uri": "subscriptions",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                },
+                "payment_gateways": {
+                    "location": "json"
+                }
+            }
+        },
+        "associateACouponToASubscription": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/coupons/{coupon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "coupon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteASubscription": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveScheduledChangesOfASubscription": {
+            "httpMethod": "GET",
+            "uri": "subscriptions/{subscription_id}/scheduledchanges",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "associateupdateCardToAnExistingCard": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/card",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "card_id": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveSubscriptionActivities": {
+            "httpMethod": "GET",
+            "uri": "subscriptions/{subscription_id}/recentactivities",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveNotesOfASubscription": {
+            "httpMethod": "GET",
+            "uri": "subscriptions/{subscription_id}/notes",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "dropScheduledChangesOfASubscription": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}/scheduledchanges",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateCustomFieldsForASubscription": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/customfields",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "associateupdateBankAccountToANewBankAccount": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/bankaccount",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "bank_account": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                }
+            }
+        },
+        "previewAmountToBeChargedForASubscription": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/compute",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                },
+                "payment_gateways": {
+                    "location": "json"
+                }
+            }
+        },
+        "changeToOfflineMode": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/autocollect",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "auto_collect": {
+                    "location": "json"
+                }
+            }
+        },
+        "associateupdateCardToANewCard": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/card",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "card": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                }
+            }
+        },
+        "addCharge": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/charge",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "amount": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingASubscriptionForANewCustomer": {
+            "httpMethod": "POST",
+            "uri": "subscriptions",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer": {
+                    "location": "json"
+                },
+                "card": {
+                    "location": "json"
+                },
+                "starts_at": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "plan": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                },
+                "payment_terms": {
+                    "location": "json"
+                },
+                "payment_terms_label": {
+                    "location": "json"
+                },
+                "coupon_code": {
+                    "location": "json"
+                },
+                "auto_collect": {
+                    "location": "json"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                },
+                "reference_id": {
+                    "location": "json"
+                },
+                "payment_gateways": {
+                    "location": "json"
+                }
+            }
+        },
+        "cancellingASubscriptionImmediately": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/cancel",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "associateupdatePaypalAccountToAnExistingPaypalAccount": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/paypalaccount",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "paypal_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "postponeRenewal": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/postpone",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "renewal_at": {
+                    "location": "json"
+                }
+            }
+        },
+        "removeBankAccountAssociatedWithASubscription": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}/bankaccount",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "addContactPerson": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/contactpersons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "contactpersons": {
+                    "location": "json"
+                }
+            }
+        },
+        "updateReference": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/reference",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "reference_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "listingAllSubscriptionsOfAParticularCustomer": {
+            "httpMethod": "GET",
+            "uri": "subscriptions",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "addeditDescriptionForAnAddOnInLineItemsList": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/lineitems/{addon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "addon_code": {
+                    "location": "uri"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "removeACouponAssociatedWithASubscription": {
+            "httpMethod": "DELETE",
+            "uri": "subscriptions/{subscription_id}/coupons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "cancellingASubscriptionAtTheEndOfTerm": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/cancel",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateSalesPerson": {
+            "httpMethod": "POST",
+            "uri": "subscriptions/{subscription_id}/salesperson",
+            "responseModel": "getResponse",
+            "parameters": {
+                "subscription_id": {
+                    "location": "uri"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveACard": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/cards/{card_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "card_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deletingACreditCard": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/cards/{card_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "card_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "creatingANewCardToTheCustomer": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/cards",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "card_number": {
+                    "location": "json"
+                },
+                "expiry_month": {
+                    "location": "json"
+                },
+                "expiry_year": {
+                    "location": "json"
+                },
+                "cvv_number": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "street": {
+                    "location": "json"
+                },
+                "city": {
+                    "location": "json"
+                },
+                "state": {
+                    "location": "json"
+                },
+                "country": {
+                    "location": "json"
+                },
+                "zip": {
+                    "location": "json"
+                },
+                "payment_gateway": {
+                    "location": "json"
+                }
+            }
+        },
+        "listAllCards": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/cards",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updatingCreditCardDetails": {
+            "httpMethod": "PUT",
+            "uri": "customers/{customer_id}/cards/{card_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "card_id": {
+                    "location": "uri"
+                },
+                "card_number": {
+                    "location": "json"
+                },
+                "expiry_month": {
+                    "location": "json"
+                },
+                "expiry_year": {
+                    "location": "json"
+                },
+                "cvv_number": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "street": {
+                    "location": "json"
+                },
+                "city": {
+                    "location": "json"
+                },
+                "state": {
+                    "location": "json"
+                },
+                "country": {
+                    "location": "json"
+                },
+                "zip": {
+                    "location": "json"
+                },
+                "payment_gateway": {
+                    "location": "json"
+                }
+            }
+        },
+        "markACouponAsActive": {
+            "httpMethod": "POST",
+            "uri": "coupons/{coupon_code}/markasactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteACoupon": {
+            "httpMethod": "DELETE",
+            "uri": "coupons/{coupon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateACoupon": {
+            "httpMethod": "PUT",
+            "uri": "coupons/{coupon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "uri"
+                },
+                "name": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "max_redemption": {
+                    "location": "json"
+                },
+                "expiry_at": {
+                    "location": "json"
+                }
+            }
+        },
+        "markACouponAsInactive": {
+            "httpMethod": "POST",
+            "uri": "coupons/{coupon_code}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "createACoupon": {
+            "httpMethod": "POST",
+            "uri": "coupons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "json"
+                },
+                "name": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "discount_by": {
+                    "location": "json"
+                },
+                "discount_value": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "max_redemption": {
+                    "location": "json"
+                },
+                "expiry_at": {
+                    "location": "json"
+                },
+                "apply_to_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "apply_to_addons": {
+                    "location": "json"
+                },
+                "addons": {
+                    "location": "json"
+                }
+            }
+        },
+        "listAllCoupons": {
+            "httpMethod": "GET",
+            "uri": "coupons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "retrieveACoupon": {
+            "httpMethod": "GET",
+            "uri": "coupons/{coupon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "coupon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "getListOfOrganizations": {
+            "httpMethod": "GET",
+            "uri": "organizations",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "listOfResources": {
+            "httpMethod": "GET",
+            "uri": "",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "retrieveAnEvent": {
+            "httpMethod": "GET",
+            "uri": "events/{event_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "event_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listOfEvents": {
+            "httpMethod": "GET",
+            "uri": "events",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "createAPayment": {
+            "httpMethod": "POST",
+            "uri": "payments",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "json"
+                },
+                "amount": {
+                    "location": "json"
+                },
+                "date": {
+                    "location": "json"
+                },
+                "payment_mode": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "reference_number": {
+                    "location": "json"
+                },
+                "invoices": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "bank_charges": {
+                    "location": "json"
+                },
+                "tax_account_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveAPayment": {
+            "httpMethod": "GET",
+            "uri": "payments/{payment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "payment_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "refundAPayment": {
+            "httpMethod": "POST",
+            "uri": "payments/{payment_id}/refunds",
+            "responseModel": "getResponse",
+            "parameters": {
+                "payment_id": {
+                    "location": "uri"
+                },
+                "amount": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteAPayment": {
+            "httpMethod": "DELETE",
+            "uri": "payments/{payment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "payment_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateCustomFieldsForPayment": {
+            "httpMethod": "POST",
+            "uri": "creditnotes/{creditnote_id}/customfields",
+            "responseModel": "getResponse",
+            "parameters": {
+                "creditnote_id": {
+                    "location": "uri"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "updateAPayment": {
+            "httpMethod": "PUT",
+            "uri": "payments/{payment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "payment_id": {
+                    "location": "uri"
+                },
+                "customer_id": {
+                    "location": "json"
+                },
+                "amount": {
+                    "location": "json"
+                },
+                "date": {
+                    "location": "json"
+                },
+                "payment_mode": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "reference_number": {
+                    "location": "json"
+                },
+                "invoices": {
+                    "location": "json"
+                },
+                "exchange_rate": {
+                    "location": "json"
+                },
+                "bank_charges": {
+                    "location": "json"
+                },
+                "tax_account_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveATriggeredWebhook": {
+            "httpMethod": "GET",
+            "uri": "webhooks/{webhook_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "webhook_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveTriggeredWebhooks": {
+            "httpMethod": "GET",
+            "uri": "webhooks",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "updateAContactPerson": {
+            "httpMethod": "PUT",
+            "uri": "customers/{customer_id}/contactpersons/{contactperson_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "contactperson_id": {
+                    "location": "uri"
+                },
+                "salutation": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "email": {
+                    "location": "json"
+                },
+                "phone": {
+                    "location": "json"
+                },
+                "mobile": {
+                    "location": "json"
+                },
+                "fax": {
+                    "location": "json"
+                },
+                "twitter": {
+                    "location": "json"
+                },
+                "designation": {
+                    "location": "json"
+                },
+                "department": {
+                    "location": "json"
+                }
+            }
+        },
+        "createAContactPerson": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/contactpersons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "salutation": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "email": {
+                    "location": "json"
+                },
+                "phone": {
+                    "location": "json"
+                },
+                "mobile": {
+                    "location": "json"
+                },
+                "fax": {
+                    "location": "json"
+                },
+                "twitter": {
+                    "location": "json"
+                },
+                "designation": {
+                    "location": "json"
+                },
+                "department": {
+                    "location": "json"
+                }
+            }
+        },
+        "listOfContactPersons": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/contactpersons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markAContactPersonAsPrimary": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/contactpersons/{contactperson_id}/primary",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "contactperson_id": {
+                    "location": "uri"
+                },
+                "salutation": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "email": {
+                    "location": "json"
+                },
+                "phone": {
+                    "location": "json"
+                },
+                "mobile": {
+                    "location": "json"
+                },
+                "fax": {
+                    "location": "json"
+                },
+                "twitter": {
+                    "location": "json"
+                },
+                "facebook": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteAContactPerson": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/contactpersons/{contactperson_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "contactperson_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveAContactPerson": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/contactpersons/{contactperson_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "contactperson_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteABankAccount": {
+            "httpMethod": "DELETE",
+            "uri": "customers/{customer_id}/bankaccounts/{account_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "account_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateABankAccount": {
+            "httpMethod": "PUT",
+            "uri": "customers/{customer_id}/bankaccounts/{account_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "account_id": {
+                    "location": "uri"
+                },
+                "account_number": {
+                    "location": "json"
+                },
+                "routing_number": {
+                    "location": "json"
+                },
+                "account_type": {
+                    "location": "json"
+                },
+                "bank_name": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "accept_license": {
+                    "location": "json"
+                },
+                "authorization_type": {
+                    "location": "json"
+                },
+                "payment_gateway": {
+                    "location": "json"
+                }
+            }
+        },
+        "createANewBankAccountForACustomer": {
+            "httpMethod": "POST",
+            "uri": "customers/{customer_id}/bankaccounts",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "account_number": {
+                    "location": "json"
+                },
+                "account_type": {
+                    "location": "json"
+                },
+                "routing_number": {
+                    "location": "json"
+                },
+                "bank_name": {
+                    "location": "json"
+                },
+                "first_name": {
+                    "location": "json"
+                },
+                "last_name": {
+                    "location": "json"
+                },
+                "accept_license": {
+                    "location": "json"
+                },
+                "authorization_type": {
+                    "location": "json"
+                },
+                "payment_gateway": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveABankAccount": {
+            "httpMethod": "GET",
+            "uri": "customers/{customer_id}/bankaccounts/{account_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "customer_id": {
+                    "location": "uri"
+                },
+                "account_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markAnAddonAsActive": {
+            "httpMethod": "POST",
+            "uri": "addons/{addon_code}/markasactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "addon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "creatingAnAddonOfPackageType": {
+            "httpMethod": "POST",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "addon_code": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "applicable_to_all_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "unit_name": {
+                    "location": "json"
+                },
+                "pricing_scheme": {
+                    "location": "json"
+                },
+                "price_brackets": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "retreiveAnAddOn": {
+            "httpMethod": "GET",
+            "uri": "addons/{addon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "addon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listAllAddOns": {
+            "httpMethod": "GET",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "listAllAddOnsOfAProduct": {
+            "httpMethod": "GET",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "creatingAnAddonOfTierType": {
+            "httpMethod": "POST",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "addon_code": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "applicable_to_all_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "pricing_scheme": {
+                    "location": "json"
+                },
+                "unit_name": {
+                    "location": "json"
+                },
+                "price_brackets": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "creatingAnAddonOfUnitType": {
+            "httpMethod": "POST",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "addon_code": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "applicable_to_all_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "pricing_scheme": {
+                    "location": "json"
+                },
+                "unit_name": {
+                    "location": "json"
+                },
+                "price_brackets": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "updatingAnAddon": {
+            "httpMethod": "PUT",
+            "uri": "addons/{addon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "addon_code": {
+                    "location": "json"
+                },
+                "name": {
+                    "location": "json"
+                },
+                "unit_name": {
+                    "location": "json"
+                },
+                "pricing_scheme": {
+                    "location": "json"
+                },
+                "price_brackets": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "applicable_to_all_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "listAllAddOnsAssociatedToAPlan": {
+            "httpMethod": "GET",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "creatingAnAddonOfVolumeType": {
+            "httpMethod": "POST",
+            "uri": "addons",
+            "responseModel": "getResponse",
+            "parameters": {
+                "name": {
+                    "location": "json"
+                },
+                "addon_code": {
+                    "location": "json"
+                },
+                "description": {
+                    "location": "json"
+                },
+                "applicable_to_all_plans": {
+                    "location": "json"
+                },
+                "plans": {
+                    "location": "json"
+                },
+                "type": {
+                    "location": "json"
+                },
+                "pricing_scheme": {
+                    "location": "json"
+                },
+                "unit_name": {
+                    "location": "json"
+                },
+                "price_brackets": {
+                    "location": "json"
+                },
+                "interval_unit": {
+                    "location": "json"
+                },
+                "product_id": {
+                    "location": "json"
+                },
+                "account_id": {
+                    "location": "json"
+                },
+                "tax_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteAnAddon": {
+            "httpMethod": "DELETE",
+            "uri": "addons/{addon_code}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "addon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markAnAddonAsInactive": {
+            "httpMethod": "POST",
+            "uri": "addons/{addon_code}/markasinactive",
+            "responseModel": "getResponse",
+            "parameters": {
+                "addon_code": {
+                    "location": "uri"
+                }
+            }
+        },
+        "collectChargeWithCard": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/collect",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "card_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "updateInvoiceAddress": {
+            "httpMethod": "PUT",
+            "uri": "invoices/{invoice_id}/address",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "billing_address": {
+                    "location": "json"
+                },
+                "shipping_address": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveAnInvoice": {
+            "httpMethod": "GET",
+            "uri": "invoices/{invoice_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "downloadAnInvoiceAsAPdfFile": {
+            "httpMethod": "GET",
+            "uri": "invoices/{invoice_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "bulkMarkInvoicesAsSent": {
+            "httpMethod": "POST",
+            "uri": "invoices/sent",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "listAllInvoices": {
+            "httpMethod": "GET",
+            "uri": "invoices",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "updateSalesPersonForAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/salesperson",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "salesperson_name": {
+                    "location": "json"
+                }
+            }
+        },
+        "addCommentsToAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/comments",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "description": {
+                    "location": "json"
+                }
+            }
+        },
+        "enableAllRemaindersForAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/paymentreminder/enable",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "markInvoiceAsSent": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/sent",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "convertAnInvoiceToOpen": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/convertoopen",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveRecentActivitiesOfAnInvoice": {
+            "httpMethod": "GET",
+            "uri": "invoices/{invoice_id}/recentactivities",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "emailAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/email",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "to_mail_ids": {
+                    "location": "json"
+                },
+                "cc_mail_ids": {
+                    "location": "json"
+                },
+                "subject": {
+                    "location": "json"
+                },
+                "body": {
+                    "location": "json"
+                }
+            }
+        },
+        "deleteAnInvoiceComment": {
+            "httpMethod": "DELETE",
+            "uri": "invoices/{invoice_id}/comments/{comment_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "comment_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "updateCustomFieldsForInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/customfields",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "custom_fields": {
+                    "location": "json"
+                }
+            }
+        },
+        "stopAllRemaindersForAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/paymentreminder/disable",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveAchPendingInvoices": {
+            "httpMethod": "GET",
+            "uri": "bankaccounts/{account_id}/pendinginvoices",
+            "responseModel": "getResponse",
+            "parameters": {
+                "account_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "retrieveInvoiceComments": {
+            "httpMethod": "GET",
+            "uri": "invoices/{invoice_id}/comments",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "writeOffAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/writeoff",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "cancelWriteOffForAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/cancelwriteoff",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "deleteAnInvoice": {
+            "httpMethod": "DELETE",
+            "uri": "invoices/{invoice_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "collectChargeWithBankAccount": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/collect",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "account_id": {
+                    "location": "json"
+                }
+            }
+        },
+        "changeExpectedPaymentDate": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/paymentdate",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "payment_expected_date": {
+                    "location": "json"
+                },
+                "stop_reminder_until_payment_expected_date": {
+                    "location": "json"
+                }
+            }
+        },
+        "voidAnInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/void",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "applyCreditsToInvoice": {
+            "httpMethod": "POST",
+            "uri": "invoices/{invoice_id}/credits",
+            "responseModel": "getResponse",
+            "parameters": {
+                "invoice_id": {
+                    "location": "uri"
+                },
+                "apply_creditnotes": {
+                    "location": "json"
+                }
+            }
+        },
+        "retrieveListOfPricebooks": {
+            "httpMethod": "GET",
+            "uri": "pricebooks",
+            "responseModel": "getResponse",
+            "parameters": []
+        },
+        "deleteAnOrganization": {
+            "httpMethod": "DELETE",
+            "uri": "organizations/{organization_id}",
+            "responseModel": "getResponse",
+            "parameters": {
+                "organization_id": {
+                    "location": "uri"
+                }
+            }
+        },
+        "listingAllOrganizations": {
+            "httpMethod": "GET",
+            "uri": "organizations",
+            "responseModel": "getResponse",
+            "parameters": []
+        }
+    },
+    "models": {
+        "getResponse": {
+            "type": "object",
+            "additionalProperties": {
+                "location": "json"
+            }
+        }
+    }
+}
